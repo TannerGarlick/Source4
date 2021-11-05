@@ -1,0 +1,35 @@
+@media only screen and (min-width: 75rem) {
+    nav {
+        display: flex;
+      }
+      nav button {
+        display: none;
+      }
+    
+      nav ul.hide {
+        display: block;
+      }
+    
+      nav ul {
+        margin-left: 2%;
+      }
+    
+      nav ul li {
+        float: left;
+      }
+    
+      nav ul li a {
+        border: none;
+        border-right: 1px solid rgba(0, 0, 0, 0.3);
+        padding: 0.6rem 1rem;
+        font-size: 20px;
+      }
+  /*     home page    */
+      main {
+        width: 900px;
+        margin: 0 auto;
+      }
+      footer {
+        margin: 0 auto;
+      }
+}
