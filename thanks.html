@@ -12,24 +12,42 @@
     href="//cdn.shopify.com/s/files/1/0255/4871/8125/files/S4_32x32.png?v=1572299220"
     type="image/x-icon"
     />
-    <title>FAQs</title>
+    <div class=headings>
+      <img src="Source4 Photos\S4i Logo Blue Red.jpg " alt="Source4 Logo">
+      </div>
+    <title>Contact Us</title>
 </head>
 <body>
-     <!-- NAVIGATION HERE -->
-     <nav class="clearfix">
+    <!-- NAVIGATION HERE -->
+    <nav class="clearfix">
         <button onclick="toggleMenu()">&#9776; Menu</button>
         <ul id="primaryNav" class="hide">
           <li class ="#"><a href="home.html">Home</a></li>
           <li class ="#"><a href="casters.html">Casters</a></li>
-          <li class ="active"><a href="faqs.html">FAQs</a></li>
           <li class ="#"><a href="about.html">About</a></li>
-          <li class ="#"><a href="contact.html">Contact Us</a></li>
+          <li class ="active"><a href="contact.html">Contact Us</a></li>
         </ul>
+        <div class="cart">
+            <img src="Source4 Photos\cart.png" width="30px" height="30px">
+          </div>
       </nav>
-    <h1>Welcome</h1>
-    <p>You made it to my website! test</p>
+    <h1>Thank you for reaching out to us!</h1>
+    <div class="checkmark">
+    <img src="Social Media Images/redcheckmark.png"  alt="checkmark" style="width:30%">
+</div>
+    <p>We will be contacting you soon.</p>
+
+
 
     <style>
+        .cart {
+        padding-top: 5px;
+        padding-left: 15px;
+        border-radius: 30px;
+      }
+    .checkmark {
+    text-align: center;
+}
       /* Small css */
       /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
 html {
@@ -53,7 +71,7 @@ html {
     margin: 1rem 1rem;
   }
   nav {
-    background-color: #6B705C;
+    background-color: #3c73b3;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
   }
@@ -93,7 +111,21 @@ html {
     background-color: #002363;
     padding: 0.5rem;
   }
-  
+  /* close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
   .headings h1 {
     font-size: 1.7rem;
     margin: 0 0 0 17px;
@@ -124,19 +156,32 @@ html {
     color:white;
   }
   /*    main    */
-    main .topphoto {
+    #toplogo {
     max-width: 100%;
     width: auto; 
+   }
+   .headings img  {
+     max-width: 400px;
+     margin-left: auto;
+     margin-right: auto;
+     padding: 20px;
+   }
+   body h1, p {
+     text-align: center;
+     padding: 20px;
    }
     /*    footer/header    */
     header,
     footer {
-      background-color: #CB997E;
+      background-color: #dbdbdb;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 5px 0;
       color: black;
+    }
+    footer p {
+    padding: 0px;
     }
     footer a {
       color: black;
@@ -150,32 +195,12 @@ html {
       right:0
     }
     header .headings img {
-      display:none;
+      display: none;
+      max-width: 200px;
     }
     header img .colimage {
       float: left;
     }
-  /*   Contact box    */
-  .contactbox {
-    background-color: #FFE8D6;
-    justify-content: space-between;
-    margin: auto auto;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    padding-top: 10px;
-    padding-bottom: 40px;
-    padding-left: 30px;
-    max-width: 300px;
-  }
-  .social-links img {
-    max-width: 40px;
-    height: auto;
-    width: auto;
-    padding: 1px;
-  }
-  .textandsocial {
-    text-align: left;
-  }
   /* Medium css */
 @media only screen and (min-width: 32.5em) {
     h1 {
@@ -183,10 +208,6 @@ html {
       }
       h2 {
         font-size: 1.5rem;
-      }
-      header,
-      footer {
-        border-radius: 10px;
       }
       header img {
         box-shadow: 0 0 30px #444;
@@ -198,6 +219,9 @@ html {
         grid-column-start: 2;
         grid-column-end: 4;
       }
+      nav {
+    justify-content: center;
+    }
 }
       /* Large css */
     @media only screen and (min-width: 75rem) {
@@ -234,13 +258,31 @@ html {
       footer {
         margin: 0 auto;
       }
+      footer p {
+      padding: 5px;
+      }
 }
+  /*   contact   */
+  .social-links {
+    justify-content: space-between;
+    margin: auto auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    padding-left: 55px;
+    max-width: 300px;
+}
+.social-links img {
+    max-width: 55px;
+    height: auto;
+    width: auto;
+    padding: 1px;
+  }
     </style>
-
-
-</body>
-<footer>
-    <div class="social-links">
+<script src="../source4.github.io/js/nav.js"></script>
+<div class="contactbox">
+<div class="social-links">
     <a href="https://twitter.com/source4ind" target="_blank">
     <img src="Social Media Images/twitter.png" alt="Twitter Icon">
     </a>
@@ -251,5 +293,12 @@ html {
     <img src="Social Media Images/instagram.png" alt="Instagran Icon">
     </a>
     </div>
+</div>
+</body>
+<footer>
+  <div class="footertext"><p>4436 Lawrence Street, Ste A/B
+    N Las Vegas, NV 89081 | 
+    orders@source4industries.com | 
+    866-734-8848</p></div>
 </footer>
 </html>

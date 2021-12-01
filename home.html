@@ -16,7 +16,9 @@
     href="//cdn.shopify.com/s/files/1/0255/4871/8125/files/S4_32x32.png?v=1572299220"
     type="image/x-icon"
     />
-
+    <div class=headings>
+      <img src="Source4 Photos\S4i Logo Blue Red.jpg " alt="Source4 Logo">
+      </div>
     <title>Home</title>
 </head>
 <body>
@@ -26,20 +28,18 @@
         <ul id="primaryNav" class="hide">
           <li class ="active"><a href="home.html">Home</a></li>
           <li class ="#"><a href="casters.html">Casters</a></li>
-          <li class ="#"><a href="faqs.html">FAQs</a></li>
           <li class ="#"><a href="about.html">About</a></li>
           <li class ="#"><a href="contact.html">Contact Us</a></li>
         </ul>
+        <div class="cart">
+          <img src="Source4 Photos\cart.png" width="30px" height="30px">
+        </div>
       </nav>
+    <main>
     <h1>Welcome</h1>
-    <p>You made it to my website! test</p>
-
-        <img src="Source4 Photos\S4i Logo Blue Red.jpg ">
+    <p>You made it to my website!</p>
         
-
-
-
-
+    <img src="//cdn.shopify.com/s/files/1/0255/4871/8125/files/Pallet-Door-Dock-Mockup-Section-Jennie-1.jpg?v=1615911995" alt="setting up shelves img">
 
 
         <style>
@@ -48,6 +48,11 @@
     html {
         -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
+      }
+      .cart {
+        padding-top: 5px;
+        padding-left: 15px;
+        border-radius: 30px;
       }
     /*   Nav/heading   */
     * {
@@ -66,7 +71,7 @@
         margin: 1rem 1rem;
       }
       nav {
-        background-color: #6B705C;
+        background-color: #3c73b3;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         text-align: center;
       }
@@ -106,7 +111,21 @@
         background-color: #002363;
         padding: 0.5rem;
       }
-      
+      /* close button */
+    .closebtn {
+      margin-left: 15px;
+      color: white;
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    /* When moving the mouse over the close button */
+    .closebtn:hover {
+      color: black;
+    }
       .headings h1 {
         font-size: 1.7rem;
         margin: 0 0 0 17px;
@@ -137,58 +156,51 @@
         color:white;
       }
       /*    main    */
-        main .topphoto {
+        #toplogo {
         max-width: 100%;
         width: auto; 
        }
-        /*    footer/header    */
-        header,
-        footer {
-          background-color: #CB997E;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 5px 0;
-          color: black;
-        }
-        footer a {
-          color: black;
-        }
-        footer {
-          font-family: "Roboto", sans-serif;
-          text-align: center;
-          position:fixed;
-          bottom:0;
-          left:0;
-          right:0
-        }
-        header .headings img {
-          display:none;
-        }
-        header img .colimage {
-          float: left;
-        }
-      /*   Contact box    */
-      .contactbox {
-        background-color: #FFE8D6;
-        justify-content: space-between;
-        margin: auto auto;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        padding-top: 10px;
-        padding-bottom: 40px;
-        padding-left: 30px;
-        max-width: 300px;
-      }
-      .social-links img {
-        max-width: 40px;
-        height: auto;
-        width: auto;
-        padding: 1px;
-      }
-      .textandsocial {
-        text-align: left;
-      }
+       .headings img  {
+         max-width: 400px;
+         margin-left: auto;
+         margin-right: auto;
+         padding: 20px;
+       }
+       body h1, p {
+         text-align: center;
+         padding: 20px;
+       }
+      /*    footer/header    */
+    header,
+    footer {
+      background-color: #dbdbdb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px 0;
+      color: black;
+    }
+    footer p {
+    padding: 0px;
+    }
+    footer a {
+      color: black;
+    }
+    footer {
+      font-family: "Roboto", sans-serif;
+      text-align: center;
+      position:fixed;
+      bottom:0;
+      left:0;
+      right:0
+    }
+    header .headings img {
+      display: none;
+      max-width: 200px;
+    }
+    header img .colimage {
+      float: left;
+    }
       /* Medium css */
     @media only screen and (min-width: 32.5em) {
         h1 {
@@ -196,10 +208,6 @@
           }
           h2 {
             font-size: 1.5rem;
-          }
-          header,
-          footer {
-            border-radius: 10px;
           }
           header img {
             box-shadow: 0 0 30px #444;
@@ -211,6 +219,9 @@
             grid-column-start: 2;
             grid-column-end: 4;
           }
+          nav {
+        justify-content: center;
+        }
     }
           /* Large css */
         @media only screen and (min-width: 75rem) {
@@ -247,12 +258,30 @@
           footer {
             margin: 0 auto;
           }
+          footer p {
+          padding: 5px;
+          }
     }
-        </style>
-
-</body>
-<footer>
-    <div class="social-links">
+   /*   contact   */
+   .social-links {
+    justify-content: space-between;
+    margin: auto auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    padding-left: 55px;
+    max-width: 300px;
+}
+.social-links img {
+    max-width: 55px;
+    height: auto;
+    width: auto;
+    padding: 1px;
+  }
+    </style>
+<div class="contactbox">
+<div class="social-links">
     <a href="https://twitter.com/source4ind" target="_blank">
     <img src="Social Media Images/twitter.png" alt="Twitter Icon">
     </a>
@@ -263,5 +292,14 @@
     <img src="Social Media Images/instagram.png" alt="Instagran Icon">
     </a>
     </div>
+</div>
+</main>
+<script src="../source4.github.io/js/nav.js"></script>
+</body>
+<footer>
+  <div class="footertext"><p>4436 Lawrence Street, Ste A/B
+    N Las Vegas, NV 89081 | 
+    orders@source4industries.com | 
+    866-734-8848</p></div>
 </footer>
 </html>
