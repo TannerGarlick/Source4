@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../source4.github.io/css/normalize.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew&display=swap" rel="stylesheet">
+
+    <link
+    rel="shortcut icon"
+    href="//cdn.shopify.com/s/files/1/0255/4871/8125/files/S4_32x32.png?v=1572299220"
+    type="image/x-icon"
+    />
+    <div class=headings>
+      <img src="Source4 Photos\S4i Logo Blue Red.jpg " alt="Source4 Logo">
+      </div>
+    <title>Cart</title>
+</head>
+<body>
+     <!-- NAVIGATION HERE -->
+     <nav class="clearfix">
+        <button onclick="toggleMenu()">&#9776; Menu</button>
+        <ul id="primaryNav" class="hide">
+          <li class ="#"><a href="index.html">Home</a></li>
+          <li class ="#"><a href="casters.html">Casters</a></li>
+          <li class ="#"><a href="about.html">About</a></li>
+          <li class ="#"><a href="contact.html">Contact Us</a></li>
+          <li class ="active"><a href="cart.html">Cart <span>0</span><img src="Source4 Photos\cart.png" width="20px" height="20px" style="margin-left: 5px;"></a></li>
+        </ul>
+      </nav>
+    <main>
+    <h1>Cart</h1>
+
+    <div class="products-container">
+      <div class="product-header">
+        <h5 class="product-title">Product</h5>
+        <h5 class="price">Price</h5>
+        <h5 class="quantity">Quantity</h5>
+        <h5 class="total">Total</h5>
+      </div>
+      <div class="products">
+
+      </div>
+    </div>
+
+
+
+
+
+        <style>
+        /* cart */
+          .products-container {
+            max-width: 650px;
+            justify-content: space-around;
+            margin: 0 auto;
+            margin-top: 30px;
+          }
+          .container, .products-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            padding-bottom: 100px;
+          }
+          .product-header {
+            width: 100%;
+            max-width: 650px;
+            display: flex;
+            justify-content: flex-start;
+            border-bottom: 4px solid lightgrey;
+            margin: 0 auto;
+          }
+          .product-title {
+            width: 45%;
+          }
+          .price {
+            float: right;
+            width: 15%;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid lightgrey;
+          }
+          .quantity {
+            float: right;
+            width: 30%;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid lightgrey;
+          }
+          .total {
+            float:right;
+            width: 10%;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid lightgrey;
+          }
+          .product {
+            width: 45%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-bottom: 1px solid lightgrey;
+          }
+          .cartTotalContainer {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            padding: 10px 0;
+          }
+          .cartTotalTitle {
+            width: 30%;
+          }
+          .cartTotal {
+            width: 10%;
+          }
+
+          /* Cart test */
+
+          body p {
+     text-align: center;
+     padding: 10px;
+    }
+      .add-cart {
+      position: absolute;
+      background-color: #3c73b3;
+      text-align: center;
+      padding: 10px;
+      padding-left: 60px;
+      padding-right: 60px;
+      color: #fff;
+      }
+      .cart {
+        padding-top: 5px;
+        padding-left: 15px;
+        border-radius: 30px;
+      }
+      body p {
+        font-family: 'Acme', sans-serif;
+        font-size: 1.1rem;
+      }
+      .row {
+        display:flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .container {
+        max-width: 1300px;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+
+          /* Small css */
+          /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+    html {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      .cart {
+        padding-top: 5px;
+        padding-left: 15px;
+        border-radius: 30px;
+      }
+    /*   Nav/heading   */
+    * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      nav button {
+        margin: 0.2rem 2%;
+        background-color: transparent;
+        border: none;
+        font-size: 1.6rem;
+        color: #fff;
+      }
+      main {
+        margin: 1rem 1rem;
+      }
+      nav {
+        background-color: #3c73b3;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+      }
+      
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      nav ul li a {
+        display: block;
+        padding: 0.8rem 2%;
+        text-decoration: none;
+        color: #fff;
+        border-top: 1px solid rgba(0, 0, 0, 0.3);
+      }
+      
+      nav ul li.active a {
+        background-color: rgba(0, 0, 0, 0.2);
+        color: #fff;
+      }
+      
+      nav ul li a:hover {
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+      
+      nav ul.hide {
+        display: none;
+      }
+      
+      nav {
+        font-family: "Quattrocento Sans", sans-serif;
+      }
+      
+      aside {
+        background-color: #002363;
+        padding: 0.5rem;
+      }
+      /* close button */
+    .closebtn {
+      margin-left: 15px;
+      color: white;
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    /* When moving the mouse over the close button */
+    .closebtn:hover {
+      color: black;
+    }
+      .headings h1 {
+        font-size: 1.7rem;
+        margin: 0 0 0 17px;
+        font-family: 'Acme', sans-serif;
+      }
+      .headings {
+        display: flex;
+        flex-direction: column;
+      }
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      
+      h1 {
+        font-size: 1.5rem;
+        margin: 0.15rem;
+        font-family: 'Acme', sans-serif;
+        line-height: 60px;
+        color: #002363;
+      }
+      
+      h2 {
+        font-size: 1rem;
+        border-bottom: 1px solid #999;
+        margin-bottom:0.5rem;
+        font-family: 'Acme', sans-serif;
+      }
+      footer a {
+        color:white;
+      }
+      /*    main    */
+        #toplogo {
+        max-width: 100%;
+        width: auto; 
+       }
+       .headings img  {
+         max-width: 400px;
+         margin-left: auto;
+         margin-right: auto;
+         padding: 20px;
+       }
+       body p {
+        font-size: 1.1rem;
+       }
+       body h1, p {
+         text-align: center;
+         padding: 20px;
+       }
+      /*    footer/header    */
+    header,
+    footer {
+      background-color: #dbdbdb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px 0;
+      color: black;
+    }
+    footer p {
+    padding: 0px;
+    }
+    footer a {
+      color: black;
+    }
+    footer {
+      font-family: "Roboto", sans-serif;
+      text-align: center;
+      position:fixed;
+      bottom:0;
+      left:0;
+      right:0
+    }
+    header .headings img {
+      display: none;
+      max-width: 200px;
+    }
+    header img .colimage {
+      float: left;
+    }
+      /* Medium css */
+    @media only screen and (min-width: 32.5em) {
+        h1 {
+            font-size: 2.5rem;
+          }
+          h2 {
+            font-size: 1.5rem;
+          }
+          header img {
+            box-shadow: 0 0 30px #444;
+            float: right;
+            margin: 10px;
+            border-radius: 0 10px 0 0;
+          }
+          article {
+            grid-column-start: 2;
+            grid-column-end: 4;
+          }
+          nav {
+        justify-content: center;
+        }
+    }
+          /* Large css */
+        @media only screen and (min-width: 75rem) {
+        nav {
+            display: flex;
+          }
+          nav button {
+            display: none;
+          }
+        
+          nav ul.hide {
+            display: block;
+          }
+        
+          nav ul {
+            margin-left: 2%;
+          }
+        
+          nav ul li {
+            float: left;
+          }
+        
+          nav ul li a {
+            border: none;
+            border-right: 1px solid rgba(0, 0, 0, 0.3);
+            padding: 0.6rem 1rem;
+            font-size: 20px;
+          }
+      /*     home page    */
+          main {
+            width: 900px;
+            margin: 0 auto;
+          }
+          footer {
+            margin: 0 auto;
+          }
+          footer p {
+          padding: 5px;
+          }
+    }
+   /*   contact   */
+   .social-links {
+    justify-content: space-between;
+    margin: auto auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    padding-left: 55px;
+    max-width: 300px;
+}
+.social-links img {
+    max-width: 55px;
+    height: auto;
+    width: auto;
+    padding: 1px;
+  }
+    </style>
+<div class="contactbox">
+<div class="social-links">
+    <a href="https://twitter.com/source4ind" target="_blank">
+    <img src="Social Media Images/twitter.png" alt="Twitter Icon">
+    </a>
+    <a href="https://www.facebook.com/source4industries.LV/" target="_blank">
+    <img src="Social Media Images/facebook.png" alt="facebook Icon">
+    </a>
+    <a href="https://www.instagram.com/source4industries/" target="_blank">
+    <img src="Social Media Images/instagram.png" alt="Instagran Icon">
+    </a>
+    </div>
+</div>
+</main>
+<script src="../source4.github.io/js/nav.js"></script>
+<script src="../source4.github.io/js/cart.js"></script>
+</body>
+<footer>
+  <div class="footertext"><p>4436 Lawrence Street, Ste A/B
+    N Las Vegas, NV 89081 | 
+    orders@source4industries.com | 
+    866-734-8848</p></div>
+</footer>
+</html>
